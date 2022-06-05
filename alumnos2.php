@@ -1,6 +1,6 @@
 <?php 
   session_start();
-
+    
   if(isset($_SESSION['usuario']) && $_SESSION['tipo'] == "Administrador"){
     $_SESSION['pagina'] = "Alumnos";
     /*echo "<br/><br/><br/><br/>";
@@ -173,11 +173,17 @@
                 }else{
                     try {
                         $alumnosBuscar = "PRIMARIA"; 
-                        $sqlSentencia = $con ->prepare("SELECT id_Alumno, CONCAT(nombreAlumno, ' ', apellidoPAlumno, ' ', apellidoMAlumno) as Nombre, 
-                                    matricula, isBecario, id_Usuario, id_DatosEscolar
-                                    FROM Alumnos 
-                                    WHERE isActivo LIKE 'A' and id_DatosEscolar = :idGrupo
-                                    ORDER BY id_Alumno;");
+                        $sqlSentencia = $con ->prepare("SELECT 
+                            id_Alumno,
+                            CONCAT(nombreAlumno, ' ', apellidoPAlumno, ' ', apellidoMAlumno) as Nombre,
+                            CONCAT(escolar.etapaEscolar, ' ', escolar.gradoEscolar, ' ', escolar.grupoEscolar) as datosEscolares,  
+                            matricula, 
+                            isBecario, 
+                            id_Usuario
+                        FROM alumnos 
+                        INNER JOIN datos_escolares escolar ON escolar.id_DatosEscolar = alumnos.id_DatosEscolar
+                        AND alumnos.isActivo LIKE 'A' and alumnos.id_DatosEscolar = :idGrupo
+                        ORDER BY id_Alumno;");
                         $sqlSentencia -> bindParam(':idGrupo',$sltGruposP);
                         $sqlSentencia -> execute();
 
@@ -193,10 +199,16 @@
                 }else{
                     try {
                         $alumnosBuscar = "SECUNDARIA";
-                        $sqlSentencia = $con ->prepare("SELECT id_Alumno, CONCAT(nombreAlumno, ' ', apellidoPAlumno, ' ', apellidoMAlumno) as Nombre, 
-                                    matricula, isBecario, id_Usuario, id_DatosEscolar
-                                    FROM Alumnos 
-                                    WHERE isActivo LIKE 'A' and id_DatosEscolar = :idGrupo
+                        $sqlSentencia = $con ->prepare("SELECT 
+                                        id_Alumno,
+                                        CONCAT(nombreAlumno, ' ', apellidoPAlumno, ' ', apellidoMAlumno) as Nombre,
+                                        CONCAT(escolar.etapaEscolar, ' ', escolar.gradoEscolar, ' ', escolar.grupoEscolar) as datosEscolares,  
+                                        matricula, 
+                                        isBecario, 
+                                        id_Usuario
+                                    FROM alumnos 
+                                    INNER JOIN datos_escolares escolar ON escolar.id_DatosEscolar = alumnos.id_DatosEscolar
+                                    AND alumnos.isActivo LIKE 'A' and alumnos.id_DatosEscolar = :idGrupo
                                     ORDER BY id_Alumno;");
                         $sqlSentencia -> bindParam(':idGrupo',$sltGruposS);
                         $sqlSentencia -> execute();
@@ -286,7 +298,7 @@
 
 
 
-  }else{
+    }else{
     header("Location:error.php");
   }
 
@@ -624,8 +636,7 @@
                                     <tr>
                                         <td><?php echo $alumno["Nombre"]?></td>
                                         <td><?php echo $alumno["matricula"]?></td>
-                                        <td><?php $becado = ($alumno["isBecario"] == 1)? "Si": "No"; echo($becado);?>
-                                        </td>
+                                        <td><?php $becado = ($alumno["isBecario"] == 1)? "Si": "No"; echo($becado);?></td>
                                         <td>
                                             <form method="post"id="formUser" >
                                                 <input hidden type="text" name="txtId" id="txtId"
@@ -707,7 +718,7 @@ $sqlSentencia = $con ->prepare("SELECT etapaEscolar, d.id_DatosEscolar, gradoEsc
         const closeModalButton = document.getElementById("closeModalButton");
         closeModalButton.addEventListener("click", (e) => {
             e.preventDefault();
-        
+           location.reload(); 
         });
 
 
