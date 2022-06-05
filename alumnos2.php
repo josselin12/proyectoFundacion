@@ -632,6 +632,7 @@
                                         <th scope="col">Nombre</th>
                                         <th scope="col">Matrícula</th>
                                         <th scope="col">Becado</th>
+                                        <th scope="col">Datos escolares</th>
                                         <th scope="col">Acciones</th>
                                     </tr>
                                 </thead>
@@ -643,6 +644,7 @@
                                         <td><?php echo $alumno["Nombre"]?></td>
                                         <td><?php echo $alumno["matricula"]?></td>
                                         <td><?php $becado = ($alumno["isBecario"] == 1)? "Si": "No"; echo($becado);?></td>
+                                        <td><?php echo $alumno["datosEscolares"]?></td>
                                         <td>
                                             <form method="post"id="formUser" >
                                                 <input hidden type="text" name="txtId" id="txtId"
