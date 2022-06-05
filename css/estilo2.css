@@ -1,0 +1,162 @@
+body {
+    background: #f1f1f1;
+}
+
+
+
+.barra {
+    background: #0a8cc0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.dropdown-menu {
+    margin: 17px;
+    background: #bcc3d6;
+    color: white;
+    box-shadow: 0 0 10px rgba(140, 227, 253, 0.568);
+}
+
+.menuperfil {
+    color: rgb(61, 152, 238);
+}
+
+.menuperfil:focus {
+    background: #00b85f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.cerrar:hover {
+    background-color: rgba(134, 71, 51, 0.877);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.user {
+    font-size: 35px;
+    
+}
+
+
+/*BARRA LATERAL*/
+
+.barra-lateral {
+    background: #73adca;
+    color: rgb(33, 121, 189);
+    min-width: 250px;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.barra-lateral a {
+    color: #fff;
+}
+
+
+/*ESTILOS MENU*/
+
+.barra-lateral .menu a {
+    display: block;
+    padding: 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(139, 236, 253, 0.1);
+}
+
+.barra-lateral .menu a:hover {
+    background-color: #003C5D;
+    text-decoration: none;
+}
+
+.active {
+    background: #003C5D;
+}
+
+.barra-lateral .menu {
+    border-top: 5px #fff solid;
+}
+
+.barra-lateral .menu a i {
+    margin-right: 20px;
+}
+
+
+/*MAIN*/
+
+.main {
+    padding-top: 40px;
+}
+
+.main .columna {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+/*mediaquerys*/
+
+@media screen and (max-width:1300px) {
+    .barra-lateral {
+        min-width: auto;
+    }
+    .barra-lateral .menu a span {
+        display: none;
+    }
+    .barra-lateral .menu a i {
+        margin: 0;
+    }
+    .barra {
+        min-width: auto;
+    }
+    .dropdown-menu {
+        margin: 20px -79px 0px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .barra-lateral {
+        min-height: auto;
+    }
+    .barra-lateral .menu a {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .dropdown-menu {
+        margin: 20px -78px 0px;
+    }
+    .logocppe {
+        width: 100%;
+    }
+    body {
+        background: #000000;
+        font-size: 16px;
+        overflow: visible;
+    }
+}
+
+.formulariorecursos {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.568);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.menu {
+    border-top: 5px rgb(99, 47, 47) solid;
+}
+
+@media screen and (max-width:575px) {
+    .barra-lateral {
+        height: auto;
+    }
+    .barra-lateral.menu a {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .dropdown-menu {
+        margin: 20px -78 0px;
+    }
+    body {
+        font-size: 16px;
+        overflow: visible;
+    }
+}

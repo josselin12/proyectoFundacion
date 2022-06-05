@@ -1,0 +1,71 @@
+@pantalla multimedia y (ancho máximo: 700 px) {
+    .nav-contenedor  {
+        ancho :  160px ;
+        altura : 100vh ;
+    }
+    .nav-contenedor a {
+        tamaño de fuente :  13px ;
+    }
+    .nav-contenedor i {
+        relleno-derecha :  10px ;
+        relleno-izquierda :  5px ;
+    }
+ 
+    .tarjeta  {
+        ancho :  260px ;
+        altura :  150px ;
+        arriba :  120px ;
+        izquierda :  180px ;
+    }
+ 
+    .tarjeta i {
+        relleno :  50px  180px ;
+    }
+ 
+    .tarjeta2  {
+        ancho :  260px ;
+        altura :  150px ;
+        arriba :  320px ;
+        izquierda :  180px ;
+    }
+ 
+    .card2 yo {
+        relleno :  50px  180px ;
+    } 
+    
+    .tarjeta3  {
+        ancho :  260px ;
+        altura :  150px ;
+        arriba :  520px ;
+        izquierda :  180px ;
+    }
+ 
+    .card3 yo {
+        relleno :  50px  180px ;
+    }
+    
+    entrada {
+        posición :  relativa ;
+        derecha :  110px ;
+        ancho :  230px ;
+    }
+    .imagen de encabezado {
+        posición :  absoluta ;
+        derecha :  140px ;
+    }
+ 
+    .encabezado i {
+        posición :  absoluta ;
+        derecha :  190px ;
+    }
+    .visitas-contenedor  {
+        visibilidad :  oculto ;
+    }
+    .productos-contenedor  {
+        visibilidad :  oculto ;
+    }
+    .ganancias-container  {
+        visibilidad :  oculto ;
+    }
+} 
+ 

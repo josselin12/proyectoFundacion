@@ -1,0 +1,11 @@
+.btnAL{
+    width: 100%;
+    margin-bottom: 15px;
+    background: linear-gradient(#ffda63, #ffb940);
+    opacity: 1;
+    border: 0;
+    color: rgb(7, 7, 7);
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 20px;
+}

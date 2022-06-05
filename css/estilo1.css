@@ -1,0 +1,131 @@
+*{
+margin: 0;
+padding: 0;
+font-family:'Dancing Script', cursive!important;
+box-sizing: border-box; 
+}
+
+
+body
+{
+    background-image:url("../img/luis.jpg");
+    background-position:center;
+     background-size:cover;
+     display: flex;
+    min-height: 100vh;
+    /*-webkit-font-smoothing: antialiased;
+    font: normal 14px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive!important;*/
+}
+
+
+form{
+   margin: auto; 
+   width: 50%;
+   max-width: 500px;
+   background: hsl(120, 17%, 94%);
+   opacity: 1;
+   padding: 30px;
+   border: lpx solid rgba(167, 166, 166, 0.2);
+   opacity: 1;
+}
+
+
+h2{
+    text-align: center;
+    margin-bottom: 28px;
+    color:rgba(0, 0, 0, 5);
+}
+
+input{
+
+   /* background-color: rgb(228, 220, 220);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    color:rgb(198, 199, 183);
+    box-shadow:0 1px 0 #d8e2d8; */
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin:30px 0;
+    font-size: 20px; 
+    
+}
+
+
+input[type= "submit"]
+{
+    background: linear-gradient(#ffda63, #ffb940);
+    opacity: 1;
+    border: 0;
+    color: rgb(7, 7, 7);
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+
+input [type= "submit"] :hover
+{
+    background:transparent!important;
+    color:white!important;
+    font-size: 18px!important;
+}
+
+
+
+input [type= "submit"] :active
+{
+    transform: scale(0,95);
+    
+}
+
+input[type= "button"]
+{
+    background: linear-gradient(#ffda63, #ffb940);
+    opacity: 1;
+    border: 0;
+    color: rgb(7, 7, 7);
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+
+input [type= "button"] :hover
+{
+    background:transparent!important;
+    color:white!important;
+    font-size: 18px!important;
+}
+
+
+
+input [type= "button"] :active
+{
+    transform: scale(0,95);
+    
+}
+
+
+@media (max-widht:768px) {
+    form{
+        width: 75%;
+    }
+
+}
+
+@media (max-width: 480px)
+{
+    form
+    {
+        width: 90%;
+    }
+}
