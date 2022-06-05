@@ -227,11 +227,17 @@
     }
 
     if($alumnosBuscar == "TODOS"){
-        $sqlSentencia = $con ->prepare("SELECT id_Alumno, CONCAT(nombreAlumno, ' ', apellidoPAlumno, ' ', apellidoMAlumno) as Nombre, 
-                                    matricula, isBecario, id_Usuario
-                                    FROM Alumnos 
-                                    WHERE isActivo LIKE 'A'
-                                    ORDER BY id_Alumno;");
+        $sqlSentencia = $con ->prepare("SELECT 
+                            id_Alumno,
+                            CONCAT(nombreAlumno, ' ', apellidoPAlumno, ' ', apellidoMAlumno) as Nombre,
+                            CONCAT(escolar.etapaEscolar, ' ', escolar.gradoEscolar, ' ', escolar.grupoEscolar) as datosEscolares,  
+                            matricula, 
+                            isBecario, 
+                            id_Usuario
+                        FROM alumnos 
+                        INNER JOIN datos_escolares escolar ON escolar.id_DatosEscolar = alumnos.id_DatosEscolar
+                        AND alumnos.isActivo LIKE 'A'
+                        ORDER BY id_Alumno;");
 
         $sqlSentencia -> execute();
 
