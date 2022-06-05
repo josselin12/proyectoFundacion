@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.css">
         <style>
         #batchGroupModal {
-            height: 500px;
+            height: 150px;
             width: 600px;
             background-color:  #fff;
             position: absolute;
