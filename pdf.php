@@ -92,7 +92,7 @@ $sqlSentencia = $con ->prepare("SELECT CONCAT(nombreAlumno, ' ', apellidoPAlumno
         $pdf->SetFont('Arial','',11);
         $pdf->Cell(45);
         $pdf->Cell(40,10,'Banco:',0,0,'L', 0);
-        $pdf->Cell(110,10,'BBVA BANCOMER',0,1,'L', 0);
+        $pdf->Cell(110,10,'CitiBanamex',0,1,'L', 0);
         $pdf->Cell(45);
         $pdf->Cell(40,10,'Titular:',0,0,'L', 0);
         $pdf->Cell(110,10,'Casa Hogar San Luis Gonzaga S.A de C.V',0,1,'L', 0);
