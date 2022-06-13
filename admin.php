@@ -62,9 +62,6 @@
 <?php include('template/head.php') ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css">
 <link rel="stylesheet" href="css/icons.css">
-<link rel="stylesheet" href="assets/timber/css/core.min">
-
-
 
 <body id="body-pd">
 
